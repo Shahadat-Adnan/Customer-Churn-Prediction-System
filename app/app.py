@@ -6,11 +6,11 @@ import shap
 
 # Loading Pre Saved Objects
 #---------------------------
-model = joblib.load(r"D:\Imp_Files\Codes\Project\Churn_Project\voting_classifier_model.joblib")
-encoders = joblib.load(r"D:\Imp_Files\Codes\Project\Churn_Project\encoders.joblib")
-imputers = joblib.load(r"D:\Imp_Files\Codes\Project\Churn_Project\imputers.joblib")
-feature_columns = joblib.load(r"D:\Imp_Files\Codes\Project\Churn_Project\feature_columns.joblib")
-background = pd.read_csv(r"D:\Imp_Files\Codes\Project\Churn_Project\shap_background.csv")
+model = joblib.load("voting_classifier_model.joblib")
+encoders = joblib.load("encoders.joblib")
+imputers = joblib.load("imputers.joblib")
+feature_columns = joblib.load("feature_columns.joblib")
+background = pd.read_csv("shap_background.csv")
 
 # Fixing Data Leakage
 #----------------------
