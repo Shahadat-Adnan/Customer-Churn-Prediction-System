@@ -6,32 +6,32 @@ Built with Scikit-learn, SHAP Explainability, and Streamlit for interactive anal
 🔗 Live Application Link: 👉 (https://loyaltylens.onrender.com) 👈
 
 # 🚀 Features
-📊 Customer churn prediction using Ensemble Machine Learning
-🧠 Explainable AI integration using SHAP
-🎨 Modern responsive Streamlit dashboard
-📈 Real-time churn probability analysis
-🔍 Feature importance visualization
-⚡ Interactive customer behavior diagnostics
+- 📊 Customer churn prediction using Ensemble Machine Learning
+- 🧠 Explainable AI integration using SHAP
+- 🎨 Modern responsive Streamlit dashboard
+- 📈 Real-time churn probability analysis
+- 🔍 Feature importance visualization
+- ⚡ Interactive customer behavior diagnostics
 
 
 # 🧠 ML Architecture
 The system uses a Voting Ensemble Classifier combining multiple machine learning models for robust prediction performance.
 
-Explainability Layer
+## Explainability Layer
 SHAP (SHapley Additive Explanations)
 Human-readable churn driver interpretation
 Feature impact analysis
 
 # 🛠️ Tech Stack
-Machine Learning
+## Machine Learning
 Scikit-learn
 SHAP
 Pandas
 NumPy
-#Frontend
+## Frontend
 Streamlit
 Custom CSS UI
-Model Persistence
+## Model Persistence
 Joblib
-#Container Tool
+## Container Tool
 Docker
