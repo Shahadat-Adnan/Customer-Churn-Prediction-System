@@ -1,4 +1,4 @@
-#Netflix Customer Churn Prediction System
+Netflix Customer Churn Prediction System
 
 An Explainable AI-powered Machine Learning application that predicts customer churn risk using behavioral, subscription, and engagement metrics.
 Built with Scikit-learn, SHAP Explainability, and Streamlit for interactive analytics and visualization.
