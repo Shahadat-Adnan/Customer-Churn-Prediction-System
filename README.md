@@ -1,11 +1,11 @@
-Netflix Customer Churn Prediction System
+# Netflix Customer Churn Prediction System
 
 An Explainable AI-powered Machine Learning application that predicts customer churn risk using behavioral, subscription, and engagement metrics.
 Built with Scikit-learn, SHAP Explainability, and Streamlit for interactive analytics and visualization.
 
 🔗 Live Application Link: 👉 (https://loyaltylens.onrender.com) 👈
 
-#🚀 Features
+# 🚀 Features
 📊 Customer churn prediction using Ensemble Machine Learning
 🧠 Explainable AI integration using SHAP
 🎨 Modern responsive Streamlit dashboard
@@ -14,7 +14,7 @@ Built with Scikit-learn, SHAP Explainability, and Streamlit for interactive anal
 ⚡ Interactive customer behavior diagnostics
 
 
-#🧠 ML Architecture
+# 🧠 ML Architecture
 The system uses a Voting Ensemble Classifier combining multiple machine learning models for robust prediction performance.
 
 Explainability Layer
@@ -22,7 +22,7 @@ SHAP (SHapley Additive Explanations)
 Human-readable churn driver interpretation
 Feature impact analysis
 
-#🛠️ Tech Stack
+# 🛠️ Tech Stack
 Machine Learning
 Scikit-learn
 SHAP
@@ -31,7 +31,7 @@ NumPy
 #Frontend
 Streamlit
 Custom CSS UI
-#Model Persistence
+Model Persistence
 Joblib
 #Container Tool
 Docker
