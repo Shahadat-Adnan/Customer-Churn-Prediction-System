@@ -5,8 +5,6 @@ import joblib
 import shap
 import io
 
-# Loading Pre Saved Objects
-#---------------------------
 model = joblib.load("voting_classifier_model.joblib")
 encoders = joblib.load("encoders.joblib")
 imputers = joblib.load("imputers.joblib")
@@ -14,7 +12,6 @@ feature_columns = joblib.load("feature_columns.joblib")
 background = pd.read_csv("shap_background.csv")
 
 # Fixing Data Leakage
-#----------------------
 tgt_col = "churned"
 
 if tgt_col in feature_columns:
@@ -27,7 +24,6 @@ if tgt_col in encoders:
     encoders.pop(tgt_col)
 
 # Using Gradient Boosting for SHAP
-#-----------------------------------
 gtb_model = model.named_estimators_["gtb"]
 
 explainer = shap.Explainer(
@@ -37,7 +33,6 @@ explainer = shap.Explainer(
 )
 
 # Feature Mapping
-# -----------------
 def make_feature_readable(feature_name):
     """
     Converts encoded feature names into readable text.
@@ -51,7 +46,6 @@ def make_feature_readable(feature_name):
     return f"{base} {value}"
 
 # UI Configuration & Styling
-# -------------
 st.set_page_config("Netflix Customer Churn Framework", layout="wide")
 
 st.markdown("""
@@ -258,9 +252,7 @@ def preprocessing_funct(df):
     df = df.reindex(columns=feature_columns, fill_value=0)
     return df
 
-# -------------------------------------------------------------------------
 # SIDEBAR NAVIGATION CONTROL PANEL
-# -------------------------------------------------------------------------
 with st.sidebar:
     st.markdown("### Execution Options")
     app_mode = st.radio(
@@ -280,9 +272,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# -------------------------------------------------------------------------
 # MANUAL ENTRY BLOCK 
-# -------------------------------------------------------------------------
 if app_mode == "Manual Entry Mode":
     # Two Column Side-by-Side Parameter Setup
     col_left, col_right = st.columns(2, gap="medium")
@@ -493,9 +483,7 @@ if app_mode == "Manual Entry Mode":
             </div>
             """, unsafe_allow_html=True)
 
-# -------------------------------------------------------------------------
 # BULK DATA PROCESSING BLOCK 
-# -------------------------------------------------------------------------
 else:
     st.markdown("""
     <div class="parameter-card">
@@ -583,7 +571,7 @@ else:
                         badge_bulk_html = "".join([f"<span class='badge-tag'>{row['feature_readable']}</span>" for _, row in global_shap.iterrows()])
                         st.markdown(f"""
                         <div class="visualization-card">
-                            <h3>Global XAi Churn Divers across File</h3>
+                            <h3>Global XAi Churn Drivers across File</h3>
                             <div style="margin-top: 15px; margin-bottom: 5px;">
                                 {badge_bulk_html}
                             </div>
