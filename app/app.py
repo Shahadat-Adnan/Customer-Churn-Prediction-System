@@ -255,7 +255,7 @@ def preprocessing_funct(df):
 # SIDEBAR NAVIGATION CONTROL PANEL
 # -------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("###Execution Options")
+    st.markdown("### Execution Options")
     app_mode = st.radio(
         "Select Diagnostics Input Method:",
         ["Manual Entry Mode", "Bulk Data Mode"]
