@@ -131,6 +131,7 @@ st.markdown("""
         border: 1px solid #e2e8f0;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         margin-bottom: 25px;
+        width: 100% !important;
     }
     .parameter-card h3 {
         color: #0f172a !important;
@@ -254,7 +255,7 @@ def preprocessing_funct(df):
 # SIDEBAR NAVIGATION CONTROL PANEL
 # -------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("### 🛠️ Execution Pipeline")
+    st.markdown("###Execution Options")
     app_mode = st.radio(
         "Select Diagnostics Input Method:",
         ["Manual Entry Mode", "Bulk Data Mode"]
@@ -277,7 +278,7 @@ st.markdown("""
 # -------------------------------------------------------------------------
 if app_mode == "Manual Entry Mode":
     # Two Column Side-by-Side Parameter Setup
-    col_left, col_right = st.columns(2, gap="large")
+    col_left, col_right = st.columns(2, gap="medium")
 
     with col_left:
         st.markdown("""<div class="parameter-card"><h3> General Information</h3>""", unsafe_allow_html=True)
@@ -575,7 +576,7 @@ else:
                         badge_bulk_html = "".join([f"<span class='badge-tag'>{row['feature_readable']}</span>" for _, row in global_shap.iterrows()])
                         st.markdown(f"""
                         <div class="visualization-card">
-                            <h3>XAi's Top Churn Drivers</h3>
+                            <h3>Global XAi Churn Divers across File</h3>
                             <div style="margin-top: 15px; margin-bottom: 5px;">
                                 {badge_bulk_html}
                             </div>
