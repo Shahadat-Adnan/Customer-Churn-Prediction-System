@@ -223,6 +223,13 @@ st.markdown("""
     .stButton>button:hover {
         background-color: #2563eb !important;
     }
+
+    /* Docker/Production Fix: Eliminates dark numeric/dropdown element subcontainer margins causing white gaps */
+    div[data-testid="stNumberInput"] [data-baseweb="input"],
+    div[data-testid="stSelectbox"] [data-baseweb="select"] {
+        margin-right: 0px !important;
+        width: 100% !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
