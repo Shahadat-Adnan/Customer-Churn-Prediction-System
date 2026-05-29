@@ -3,4 +3,3 @@ pandas
 numpy
 joblib
 shap
-scikit-learn==1.6.1
